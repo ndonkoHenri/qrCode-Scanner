@@ -39,6 +39,8 @@ for qrCode in all_qrCodes:
     cv2.putText(image, qr_info_data, (qr_info_rect[0], qr_info_rect[1] - 5), cv2.FONT_HERSHEY_COMPLEX, 0.35,
                 text_color, 1)
     print(f"{count}-->", qr_info_data)
+
+
     count += 1
     cv2.imshow("qrCodeScanner - ndonkoHenri", image)
 __end = datetime.now()
