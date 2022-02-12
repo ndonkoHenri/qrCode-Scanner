@@ -18,6 +18,6 @@ In a sincere way, I will tell you some reasons for you to use this program...
 - Remember it has two Programs: One made only for Images Scanning and the other for Real-Time Scanning;
 - The Speed is just astonishing: 0:00:01.114509 seconds;
 - Comments all over, for better understanding of the code;
-- The Programs respect the Python Code Styling and Syntax format
+- Our Formatting and Syntax respect the Python code styling rules;
 
 Thanks for using my Programs!! :-)
