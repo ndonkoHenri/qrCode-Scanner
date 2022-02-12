@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
+from datetime import datetime
 from pyzbar.pyzbar import decode  # Pyzbar is useful for QRcodes decoding, and only it's "decode" method is needed
-
+__start = datetime.now()    # Start time, for speed measurement
 image_path = "test_images/qrcode2.jpg"  # Path to your Image
 image = cv2.imread(image_path)
 text_color = (255, 55, 50)  # Color of text found in the qrCode
@@ -40,5 +41,7 @@ for qrCode in all_qrCodes:
     print(f"{count}-->", qr_info_data)
     count += 1
     cv2.imshow("qrCodeScanner - ndonkoHenri", image)
-
+__end = datetime.now()
+duration = __end - __start
+print(duration)
 cv2.waitKey(0)  # A delay function to see what happened
