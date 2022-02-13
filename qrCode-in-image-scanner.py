@@ -2,11 +2,14 @@ import cv2
 import numpy as np
 from datetime import datetime
 from pyzbar.pyzbar import decode  # Pyzbar is useful for QRcodes decoding, and only it's "decode" method is needed
+
 __start = datetime.now()    # Start time, for speed measurement
-image_path = "test_images/qrcode2.jpg"  # Path to your Image
+
+image_path = "test_images/qrcode2.jpg"  # Path to Image to be scanned
 image = cv2.imread(image_path)
-text_color = (255, 55, 50)  # Color of text found in the qrCode
-bounding_box_color = (255, 55, 0)  # Text of rectangle surrounding qrCode
+
+text_color = (255, 55, 50)  # Color of text found in the qrCode(BGR)
+bounding_box_color = (255, 55, 0)  # Text of rectangle surrounding qrCode(BGR)
 
 
 def qr_info_extractor(individual_qrcode):
@@ -37,13 +40,12 @@ for qrCode in all_qrCodes:
     # Get the diagonal points to the origin for rectangle drawing, but not really useful in code
     qr_origin_diagonal = (qr_info_polygon[2].x, qr_info_polygon[2].y)
     cv2.putText(image, qr_info_data, (qr_info_rect[0], qr_info_rect[1] - 5), cv2.FONT_HERSHEY_COMPLEX, 0.35,
-                text_color, 1)
-    print(f"{count}-->", qr_info_data)
-
-
-    count += 1
-    cv2.imshow("qrCodeScanner - ndonkoHenri", image)
-__end = datetime.now()
-duration = __end - __start
-print(duration)
+                text_color, 1)  # Adds a text on top of the qrcode's bounding box
+    print(f"{count}-->", qr_info_data) 
+    count += 1 
+    cv2.imshow("qrCodeScanner - ndonkoHenri", image)    # Opens a window and show output
+    
+__end = datetime.now()  # End time
+duration = __end - __start  # Time lapse
+print(duration) # Displays the time lapse
 cv2.waitKey(0)  # A delay function to see what happened
