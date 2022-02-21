@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from datetime import datetime
-from pyzbar.pyzbar import decode  # Pyzbar is useful for QRcodes decoding, and only it's "decode" method is needed
+from pyzbar.pyzbar import decode  # Pyzbar is useful for QR codes decoding, and only it's "decode" method is needed
 
 __start = datetime.now()    # Start time, for speed measurement
 
@@ -20,6 +20,7 @@ def qr_info_extractor(individual_qrcode):
     data_in_string = data_in_bytes.decode("utf-8")  # we convert to string utf-8 for easy text display
     polygon = individual_qrcode.polygon
     rect = individual_qrcode.rect
+    print(rect)
     return type, data_in_string, polygon, rect  # infos needed about the qrCode
 
 
@@ -47,5 +48,5 @@ for qrCode in all_qrCodes:
     
 __end = datetime.now()  # End time
 duration = __end - __start  # Time lapse
-print(duration) # Displays the time lapse
+print("\nDuration: ", duration)  # Displays the time-lapse
 cv2.waitKey(0)  # A delay function to see what happened
