@@ -1,6 +1,7 @@
 # QR Code Scanner !
 This is a basic Computer Vision Program made to scan through QR Codes in an image or in real-time!
 Awesome right? :)
+A Web-App version of this program has been built and could be viewed by clicking on -> [QR WEB-APP](https://qrscanner.anvil.app/)
 
 # The Algorithm || How it works?
 You might ask yourself how precisely does this great tool work...?
