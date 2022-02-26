@@ -7,6 +7,7 @@ Awesome right? :)
 
 # The Algorithm || How it works?
 You might ask yourself how precisely does this great tool work...?
+
 An Algorithm is the simplest and understandable way to represent a program.
 
 Have a look o_o:
@@ -18,9 +19,9 @@ Have a look o_o:
 # Why use this Program amongst all out there?
 In a sincere way, I will tell you some reasons for you to use this program...
 
-- Remember it has two Programs: One made only for Images Scanning and the other for Real-Time Scanning;
+- Remember that this repository contains two Programs: One made only for Images Scanning and the other for Real-Time Scanning;
 - The Speed is just astonishing, less than 0:00:01.114509 seconds;
 - Comments all over, for better understanding of the code;
-- Try it out to find more interesting features(ex: speed) and let me know...
+- Try it out to find more interesting features and let me know...
 
 Thanks for using my Programs!! :-)
